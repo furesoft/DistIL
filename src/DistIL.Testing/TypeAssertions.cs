@@ -112,4 +112,9 @@ public static class TypeAssertions
     {
         type.Methods.ShouldContain(m => m.Name == name && m.ReturnType.Namespace == returnType);
     }
+
+    public static void ShouldHaveEvent(this TypeDef type, string name)
+    {
+        type.Events.ShouldContain(e => e.Name == name);
+    }
 }
